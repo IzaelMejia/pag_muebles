@@ -1,0 +1,95 @@
+<!-- Quiere decir que home herda de base.html  -->
+{% extends "ProyectoWebApp/base.html" %} 
+
+<!-- Carga las imagenes -->
+{% load static %}
+
+<!-- Agregar el bloque de contenido  -->
+{% block content  %}
+  <section class="section2-Products mt-5">
+    <div class="container text-center">
+      <h2 class="fw-bolder fs-2">Productos</h2>
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-5">
+        <div class="col ">
+          <img class="iconSofa" src="{% static 'ProyectoWebApp/img/sofaIcon.png' %}" alt="">
+        </div>
+        <div class="col d-flex  align-items-center">
+          <div class="line-separation w-100 "></div>
+        </div>
+        <div class="col d-flex  d-flex flex-column justify-content-center align-items-center">
+          <img class="iconSofa" src="{% static 'ProyectoWebApp/img/armarioIcon.png' %}" alt="">
+          
+        </div>
+        <div class="col d-flex  align-items-center">
+          <div class="line-separation w-100 "></div>
+        </div>
+        <div class="col d-flex  d-flex flex-column justify-content-center align-items-center">
+          <img class="iconSofa" src="{% static 'ProyectoWebApp/img/sillaIcon.png' %}" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-5">
+        <div class="col ">
+          <p class="d-flex flex-column">
+            <samp class="fs-3 fw-bolder">Sofas</samp>
+            <samp class="colorTextCremirta fw-bolder">Comodos para tu sala</samp>
+          </p>
+          
+        </div>
+        <div class="col d-flex  align-items-center">
+        </div>
+        <div class="col ">
+          <p class="d-flex flex-column">
+            <samp class="fs-3 fw-bolder">Armarios</samp>
+            <samp class="colorTextCremirta fw-bolder">Elegantes para tu cuarto</samp>
+          </p>
+        </div>
+        <div class="col d-flex  align-items-center">
+        </div>
+        <div class="col d-flex  d-flex flex-column justify-content-center align-items-center">
+          <p class="d-flex flex-column">
+            <samp class="fs-3 fw-bolder">Sillas</samp>
+            <samp class="colorTextCremirta fw-bolder">Bonitas para comedor</samp>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  
+  <section class="section1 w-100 mt-5">
+    <div class="d-flex justify-content-center ">
+      <div class="section1-Description w-25 d-flex flex-column align-items-center">
+        <p class="textoNormal text-center">Damos vida a tus espacios con muebles únicos y personalizados. 
+          En nuestro taller de diseño de muebles, combinamos creatividad y 
+          artesanía para crear piezas que reflejan tu estilo y se integran a la 
+          perfección en tu hogar u oficina. 
+        </p>
+        <div class="line-separation w-75 "></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section2-Products mt-5">
+    <div class="container text-center">
+      <div class="row row-cols-2">
+        <div class="col ">
+          <img class="w-50  marginImg" src="{% static 'ProyectoWebApp/img/silla.png' %}" alt=""  >
+        </div>
+        <div class="col">
+          <div class="d-flex flex-column justify-content-center align-items-start h-100">
+            <h3>Silla Baja</h3>
+              <h4>Edición de cuero verde</h4>
+              <p class="text-start w-50 ">La silla de edición de cuero verde es una obra maestra de diseño y comodidad. Con su elegante tapizado en cuero de tonalidad verde, esta silla combina a la perfección el lujo con la funcionalidad. </p>
+              <button type="submit" class="buttonLeerMas">Leer más</button>
+          </div>  
+          </div>
+      </div>
+    </div>
+  </section>
+{% endblock  %}
+  
