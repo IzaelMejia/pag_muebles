@@ -20,6 +20,7 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('servicios/', include("servicios.urls")),
     # Enlazar a la app 
     path("", include("ProyectoWebApp.urls")),
 

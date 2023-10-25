@@ -1,0 +1,27 @@
+<!-- Quiere decir que servicios herda de base.html  -->
+{% extends "ProyectoWebApp/base.html" %} 
+
+<!-- Carga el contenido estatico  -->
+{% load static %}
+
+<!-- Agregar el bloque de contenido  -->
+{% block content  %}
+    <h2 class="text-center mt-5 fw-bold  fs-1">Servicios</h2>
+    <p class="text-center textoBreve">Un servicio de Diseño de Muebles ofrece la creación de muebles personalizados y únicos, adaptados a las preferencias y necesidades del cliente.</p>
+    {% for servicio in servicios %}
+        <section class=" w-100 d-flex flex-column justify-content-center  items-center mt-2">
+            <div class="w-100 d-flex  justify-content-center mt-4 ">
+                    <div class="imagenRedondaContenedor  ">
+                        <img class="imgServicios" src="{{servicio.imagen.url}}" alt="{{servicio.titulo}}">
+                    </div>
+                    <div class="d-flex flex-column  justify-content-center ps-5 w-25" >
+                        <h3 class="fw-bolder">{{servicio.titulo}}</h3>
+                        <p class="textoDescripcionServicios"> {{servicio.contenido}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endfor%}
+  
+{% endblock  %}
+  
