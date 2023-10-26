@@ -139,3 +139,38 @@ footer {
 
 
 /* ---------------- End Servicios ---------------- */
+
+
+/*  */
+
+.contenedorCategorias{
+  background-color: var(--color-negro);
+  color: #fff;
+}
+
+.textoCategorias{
+  font-size: 18px;
+}
+.titleBlog{
+  color: var(--color-verdeFuerte);
+}
+
+.imgCategorias{
+  width: 18px;
+  height: 18px;
+  margin-top: 0;
+  margin-right: 4px;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.containerPost{
+  width: 350px;
+}
+
+.imgPost{
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}

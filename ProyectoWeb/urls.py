@@ -20,7 +20,11 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path('servicios/', include("servicios.urls")),
+
+    path('blog/', include("blog.urls")),
+    
     # Enlazar a la app 
     path("", include("ProyectoWebApp.urls")),
 
