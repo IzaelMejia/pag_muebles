@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+from django.contrib.messages import constants as mensages_de_error
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -40,6 +42,13 @@ INSTALLED_APPS = [
     "ProyectoWebApp",
     "servicios",
     "blog",
+    "contacto",
+    "tienda",
+    "carro",
+    "autenticacion",
+    "crispy_forms",
+    "crispy_bootstrap5",
+    "pedidos",
 ]
 
 MIDDLEWARE = [
@@ -65,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                "carro.context_processor.importe_total_carro",
             ],
         },
     },
@@ -130,3 +140,25 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# CONFIGURACION DE EMAIL
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'izaelmejiaa@gmail.com'
+EMAIL_HOST_PASSWORD = 'jdvg jrhi rigs rvcu'
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+MESSAGE_TAGS={
+    mensages_de_error.DEBUG: 'secondary',
+    mensages_de_error.INFO: 'info',
+    mensages_de_error.ERROR: 'danger',
+    mensages_de_error.WARNING: 'warning',
+    mensages_de_error.SUCCESS: 'success'
+
+}

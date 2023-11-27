@@ -1,0 +1,33 @@
+<!-- Quiere decir que home herda de base.html  -->
+{% extends "ProyectoWebApp/base.html" %} 
+
+<!-- Carga las imagenes -->
+{% load static %}
+
+<!-- Agregar el bloque de contenido  -->
+{% block content  %}
+    <h1 class="text-center mt-5">Productos</h1>
+    <div class="iconoCarrito">
+        {% include "carro/widget.html" %}
+    </div>
+    <div class="container text-center mt-2">
+        <div class="row">
+        {% for producto in productos%}
+        <div class="col mt-4">
+            <div class="card colorFondoCard" style="width: 20rem;">
+                <img src="{{producto.imagen.url}} " class="card-img-top cardImagenProducto" alt="..." >
+                <div class="card-body">
+                    <h5 class="card-title">{{producto.nombre}}</h5>
+                    <p class="card-text">{{producto.precio}}&nbsp;</p>
+                    <a href="{% url 'carro:agregar' producto.id %}"  
+                        class="btn colorBotonAgregar w-50">Agregar
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+  
+{% endblock  %}
+  

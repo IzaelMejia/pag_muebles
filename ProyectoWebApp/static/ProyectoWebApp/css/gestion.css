@@ -19,9 +19,15 @@ html, body {
   background-color: var(--color-verdeFuerte);
 }
 
-
+.colorFondoCard{
+  background-color: #d1c3a9;
+}
 
 .colorTextCremirta{
+  color: var(--color-cremitaPiel);
+}
+
+.textoCrema{
   color: var(--color-cremitaPiel);
 }
 
@@ -150,6 +156,11 @@ footer {
 
 .textoCategorias{
   font-size: 18px;
+  transition: color 0.1s, font-weight 0.1s;
+}
+.textoCategorias:hover{
+  font-weight: 700;
+  text-decoration: underline;
 }
 .titleBlog{
   color: var(--color-verdeFuerte);
@@ -173,4 +184,82 @@ footer {
   height: 250px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+.contenedorCategorias a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Contacto */
+
+.contactoImg{
+  width: 50px;
+  height: 50px;
+}
+
+.linea-vertical {
+  border-right: 3px solid var(--color-cremitaPiel); 
+  height: auto; 
+}
+
+.contenedorInfoContacto{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedorInfoContacto form{
+  width: 60%;
+}
+.contenedorInfoContacto table{
+  width: 100%;
+}
+.contenedorInfoContacto input{
+  border-style: none;
+  width: 100%;
+}
+
+.contenedorInfoContacto textarea{
+  width: 100%;
+  border-style: none;
+  position: relative;
+}
+
+.botonEnviarContacto{
+  background-color: var(--color-negro);
+  color: var(--color-cremitra);
+  font-size: 18px;
+}
+
+.botonEnviarContacto:hover{
+  font-weight: 600;
+}
+
+.cardImagenProducto{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tienda */
+.colorBotonAgregar{
+  background-color: #171612;
+  color: #fff;
+}
+.colorBotonAgregar:hover{
+  font-weight: 600;
+  background-color: #171612;
+  color: #FFF;
+}
+
+/* Carrito */
+.iconoCarrito{
+  float: right;
+  cursor: pointer;
+  width: 20%;
+  margin-right: 20px;
 }

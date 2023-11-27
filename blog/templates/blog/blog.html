@@ -12,10 +12,12 @@
     <div class="contenedorCategorias d-flex align-items-center m-2 flex-wrap">
       <img src="{% static 'ProyectoWebApp/img/estellaAmarilla.png' %}" alt="" 
         class="imgCategorias ">
-      <h4 class="textoCategorias "> {{categoria.nombre}}</h4>
+      <a href="{%url 'categoria' categoria.id %}"><h4 class="textoCategorias "> {{categoria.nombre}}</h4></a>
     </div>
     {% endfor %}
+    
   {% endfor %}
+  
 </div>
 
   <div class="container text-center">

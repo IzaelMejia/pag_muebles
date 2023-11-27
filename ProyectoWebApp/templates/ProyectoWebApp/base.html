@@ -17,16 +17,31 @@
           <button class="navbar-toggler  colorIconBurger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>      
-          <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div class="collapse navbar-collapse position-relative" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-auto fs-5 justify-content-between">
-              <a class="nav-link colorTextCremirta" aria-current="page" href="{% url 'home' %}">Home</a>
-              <a class="nav-link colorTextCremirta mx-4" href="{% url 'servicios' %}">Servicios</a>
-              <a class="nav-link colorTextCremirta mx-4" href="{% url 'tienda' %}">Tienda</a>
-              <a class="nav-link colorTextCremirta mx-4" href="{% url 'contacto' %}">Contacto</a>
-              <a class="nav-link colorTextCremirta mx-4" href="{% url 'blog' %}">Blog</a>
+                <!-- Enlaces de navegación -->
+                <a class="nav-link colorTextCremirta mx-4" aria-current="page" href="{% url 'home' %}">Home</a>
+                <a class="nav-link colorTextCremirta mx-4" href="{% url 'servicios' %}">Servicios</a>
+                <a class="nav-link colorTextCremirta mx-4" href="{% url 'tienda' %}">Tienda</a>
+                <a class="nav-link colorTextCremirta mx-4" href="{% url 'contacto' %}">Contacto</a>
+                <a class="nav-link colorTextCremirta mx-4" href="{% url 'blog' %}">Blog</a>
             </div>
-          </div>
+            <!-- Contenido Sesión -->
+            <div class="d-flex align-items-end justify-content-end position-absolute" style="right: 0; bottom: 0; margin-bottom: 8px;">
+                <p class="fs-6  me-3 mb-0">
+                  {% if user.is_authenticated %}
+                    <div class="d-flex ">
+                      <p class="colorTextCremirta mb-0 me-3 pe-none">Bienvenido {{user.username}}</p>
+                      <a class="text-decoration-none colorTextCremirta" href="{% url 'cerrar_session' %}">Cerrar Sesión</a>
+                    </div>
+                  {% else %}
+                    <a class="me-3 colorTextCremirta text-decoration-none" href="{% url 'autenticacion' %}">Registrar</a>
+                    <a class="colorTextCremirta text-decoration-none" href="{% url 'logear' %}">Login</a>
+                  {% endif %}
+                </p>
+            </div>
         </div>
+        
       </nav>
 
       <div class="containerFirst position-relative ">
