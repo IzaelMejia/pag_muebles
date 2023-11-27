@@ -1,7 +1,7 @@
 from .carro import Carro
 
 def importe_total_carro(request):
-    #carro = Carro(request)
+    carro = Carro(request)
     total=0
     if request.user.is_authenticated: #saber si esta autenticado el usuario
         for key, value in request.session["carro"].items(): #recorrer el carro

@@ -45,10 +45,14 @@
         <td colspan="2">
           <p>Total=${{importe_total_carro}}</p>
         </td>
+        {% if request.session.carro.items %}
+          <td colspan="1">
+            <a href="{% url 'procesar_pedido' %}" class="btn btn-danger ">Hacer pedido</a>
+          </td>
+          {% else %}
+          <td colspan="1"></td>
+        {% endif %}
 
-        <td colspan="1">
-          <button class="btn btn-success">Pagar</button>
-        </td>
       </tr>
     </tfoot>
   </table>
